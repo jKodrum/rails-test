@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Poster</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<%= render 'layouts/header' %>
+
+
+<!-- Page Content -->
+<div class="container">
+	<%= yield %>
+</div>
+<!-- /.container -->
+
+<div class="container">
+<div class="jumbotron">
+<p class="notice">Notice: <%= notice %>
+<p class="alert">Alert: <%= alert %>
+</div>
+</div>
+
+</body>
+</html>

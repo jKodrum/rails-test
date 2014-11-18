@@ -1,0 +1,11 @@
+<div class="container">
+	<%= content_for :form do %>
+		<h2 class="form-signin-heading">Please sign in</h2>
+	<% end %>
+	<%= content_for :links do %>
+		<%= render "devise/shared/links" %>
+	<% end %>
+
+	<%= render "form" %>
+
+</div> <!-- /container -->

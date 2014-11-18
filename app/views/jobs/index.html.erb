@@ -1,0 +1,31 @@
+<h1>Jobs</h1>
+<h3>Page: <%= @page %></h3>
+<p>
+Show: (<%= @capacity %>)
+<% for cap in [5, 10, 20, 30, 50] %>
+	| <%= link_to cap, jobs_path([1,cap])%>
+<% end %>
+</p>
+<% 1.upto(@maxpage) do |x| %>
+	<%= link_to x, jobs_path([x, @capacity]) %>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>ID</th>
+      <th>Job</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @jobs.each do |job| %>
+      <tr>
+        <td><%= job.id %></td>
+        <td><%= link_to job.jobname, job.joburl %></td>
+        <td><%= link_to 'Show', job %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

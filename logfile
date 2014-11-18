@@ -1,0 +1,16 @@
+LOG:  database system was shut down at 2014-10-30 14:17:02 CST
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+FATAL:  database "SianJhe" does not exist
+FATAL:  role "psql" does not exist
+FATAL:  database "SianJhe" does not exist
+FATAL:  database "psql" does not exist
+FATAL:  role "postgres" does not exist
+ERROR:  syntax error at or near "current_database" at character 1
+STATEMENT:  current_database;
+ERROR:  column "current_database" does not exist at character 8
+STATEMENT:  select current_database;
+LOG:  received smart shutdown request
+LOG:  autovacuum launcher shutting down
+LOG:  shutting down
+LOG:  database system is shut down
