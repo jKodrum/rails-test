@@ -8,7 +8,7 @@ class JobsController < ApplicationController
 			@page = params[:format].to_i
 		end
 		@maxpage = (Job.count().to_f/@capacity + 0.9).to_i
-		@jobs = Job.all.limit(@capacity).offset((@page-1)*@capacity)
+		@jobs = Job.all.order(:id).limit(@capacity).offset((@page-1)*@capacity)
 	end
 
 	def show

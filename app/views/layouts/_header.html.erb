@@ -34,6 +34,10 @@
 					</ul>
 				</li>
 				<% if current_user %>
+					<li><%= link_to 'Hello, '<< current_user.name, "#" %>
+					<li><%= link_to 'MyPoster', '#' %>
+					<li><%= link_to 'MyJoblist', '#' %>
+					<li><%= link_to 'MyFriends', '#' %>
 					<li><%= link_to '登出', destroy_user_session_path, method: :delete %></li>
 				<% else %>
 					<li><%= link_to '登入', user_session_path %></li>
