@@ -1,0 +1,13 @@
+<h1>Editing <%= @job.jobname %></h1>
+
+<%= form_for(@job) do |j| %>
+  <div class="field">
+    <%= j.label :location %><br>
+    <%= j.text_area :location %>
+  </div>
+  <div class="action">
+    <%= j.submit %>
+  </div>
+<% end %>
+
+<%= link_to 'Back', jobs_path %>
